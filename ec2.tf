@@ -16,3 +16,11 @@ resource "aws_instance" "database" {
     DATABASE_MESSAGE      = var.database_message
   }))
 }
+
+resource "aws_instance" "example" {
+  associate_public_ip_address = true # Sensitive
+}
+
+resource "aws_dms_replication_instance" "example" {
+  publicly_accessible = true # Sensitive
+}
