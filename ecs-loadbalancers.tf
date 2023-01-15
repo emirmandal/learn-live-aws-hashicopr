@@ -137,7 +137,7 @@ resource "aws_lb" "consul_server_alb" {
   security_groups = [aws_security_group.consul_server_alb.id]
   subnets = aws_subnet.public.*.id
   idle_timeout = 60
-  ip_address_type = "dualstack"
+  ip_address_type = "ipv4"
 
   tags = { "Name" = "${var.default_tags.project}-consul-server-alb" }
 }
