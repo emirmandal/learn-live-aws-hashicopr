@@ -29,3 +29,5 @@ override.tf.json
 # example: *tfplan*
 .scannerwork/.sonar_lock
 .scannerwork/report-task.txt
+
+consul_token.txt

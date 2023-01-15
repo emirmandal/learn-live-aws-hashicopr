@@ -27,7 +27,7 @@ variable "public_subnet_count" {
 variable "private_subnet_count" {
   type        = number
   description = "Number of private subnets to create"
-  default     = 2
+  default     = 3
 }
 
 variable "database_private_ip" {
@@ -68,4 +68,10 @@ variable "consul_server_allowed_cidr_blocks_ipv6" {
   type        = list(string)
   description = "List of valid IPv6 CIDR blocks that can access the consul servers from the public internet."
   default     = ["::/0"]
+}
+
+variable "consul_dc1_name" {
+  type = string
+  description = "Name of Consul datacenter"
+  default = "dc1"
 }
